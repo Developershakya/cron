@@ -1,0 +1,15 @@
+name: Hit Cron API
+
+on:
+  schedule:
+    - cron: "35 19 * * *"
+  workflow_dispatch:
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hit API
+        run: |
+          curl "https://follopay.free.nf/api/deactivate-posts.php?key=YOUR_SECRET_KEY"
