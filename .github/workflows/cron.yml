@@ -2,7 +2,7 @@ name: Hit Cron API
 
 on:
   schedule:
-    - cron: "35 19 * * *"
+    - cron: "43 19 * * *"  # 1:13 AM IST
   workflow_dispatch:
 
 jobs:
@@ -12,4 +12,5 @@ jobs:
     steps:
       - name: Hit API
         run: |
-          curl "https://follopay.free.nf/api/deactivate-posts.php?key=YOUR_SECRET_KEY"
+          curl "https://follopay.free.nf/api/deactivate-posts.php?key=my_super_secret_12345"
+          
